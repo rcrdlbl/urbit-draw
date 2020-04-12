@@ -2,34 +2,34 @@
 /=  index
   /^  octs
   /;  as-octs:mimes:html
-  /:  /===/app/%APPNAME%/index
+  /:  /===/app/draw/index
   /|  /html/
       /~  ~
   ==
 /=  tile-js
   /^  octs
   /;  as-octs:mimes:html
-  /:  /===/app/%APPNAME%/js/tile
+  /:  /===/app/draw/js/tile
   /|  /js/
       /~  ~
   ==
 /=  script
   /^  octs
   /;  as-octs:mimes:html
-  /:  /===/app/%APPNAME%/js/index
+  /:  /===/app/draw/js/index
   /|  /js/
       /~  ~
   ==
 /=  style
   /^  octs
   /;  as-octs:mimes:html
-  /:  /===/app/%APPNAME%/css/index
+  /:  /===/app/draw/css/index
   /|  /css/
       /~  ~
   ==
-/=  %APPNAME%-png
+/=  draw-png
   /^  (map knot @)
-  /:  /===/app/%APPNAME%/img  /_  /png/
+  /:  /===/app/draw/img  /_  /png/
 ::
 |%
 +$  card  card:agent:gall
@@ -38,16 +38,16 @@
 =<
   |_  bol=bowl:gall
   +*  this       .
-      %APPNAME%-core  +>
-      cc         ~(. %APPNAME%-core bol)
+      draw-core  +>
+      cc         ~(. draw-core bol)
       def        ~(. (default-agent this %|) bol)
   ::
   ++  on-init
     ^-  (quip card _this)
-    =/  launcha  [%launch-action !>([%add %%APPNAME% / '/~%APPNAME%/js/tile.js'])]
+    =/  launcha  [%launch-action !>([%add %draw / '/~draw/js/tile.js'])]
     :_  this
-    :~  [%pass / %arvo %e %connect [~ /'~%APPNAME%'] %%APPNAME%]
-        [%pass /%APPNAME% %agent [our.bol %launch] %poke launcha]
+    :~  [%pass / %arvo %e %connect [~ /'~draw'] %draw]
+        [%pass /draw %agent [our.bol %launch] %poke launcha]
     ==
   ++  on-poke
     |=  [=mark =vase]
@@ -96,18 +96,18 @@
   ^-  simple-payload:http
   =+  url=(parse-request-line url.request.inbound-request)
   ?+  site.url  not-found:gen
-      [%'~%APPNAME%' %css %index ~]  (css-response:gen style)
-      [%'~%APPNAME%' %js %tile ~]    (js-response:gen tile-js)
-      [%'~%APPNAME%' %js %index ~]   (js-response:gen script)
+      [%'~draw' %css %index ~]  (css-response:gen style)
+      [%'~draw' %js %tile ~]    (js-response:gen tile-js)
+      [%'~draw' %js %index ~]   (js-response:gen script)
   ::
-      [%'~%APPNAME%' %img @t *]
+      [%'~draw' %img @t *]
     =/  name=@t  i.t.t.site.url
-    =/  img  (~(get by %APPNAME%-png) name)
+    =/  img  (~(get by draw-png) name)
     ?~  img
       not-found:gen
     (png-response:gen (as-octs:mimes:html u.img))
   ::
-      [%'~%APPNAME%' *]  (html-response:gen index)
+      [%'~draw' *]  (html-response:gen index)
   ==
 ::
 --
