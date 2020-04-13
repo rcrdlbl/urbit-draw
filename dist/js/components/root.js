@@ -19,9 +19,9 @@ export class Root extends Component {
           return (
             React.createElement('div', { className: "cf w-100 flex flex-column pa4 ba-m ba-l ba-xl b--gray2 br1 h-100 h-100-minus-40-m h-100-minus-40-l h-100-minus-40-xl f9 white-d"               , __self: this, __source: {fileName: _jsxFileName, lineNumber: 20}}
               , React.createElement('h1', { className: "mt0 f8 fw4"  , __self: this, __source: {fileName: _jsxFileName, lineNumber: 21}}, "draw")
-              , React.createElement('p', { className: "lh-copy measure pt3"  , __self: this, __source: {fileName: _jsxFileName, lineNumber: 22}}, "Welcome to your Landscape application."    )
-              , React.createElement('p', { className: "lh-copy measure pt3"  , __self: this, __source: {fileName: _jsxFileName, lineNumber: 23}}, "To get started, edit "    , React.createElement('code', {__self: this, __source: {fileName: _jsxFileName, lineNumber: 23}}, "src/index.js"), " or "  , React.createElement('code', {__self: this, __source: {fileName: _jsxFileName, lineNumber: 23}}, "draw.hoon"), " and "  , React.createElement('code', {__self: this, __source: {fileName: _jsxFileName, lineNumber: 23}}, "|commit %home" ), " on your Urbit ship to see your changes."        )
-              , React.createElement('a', { className: "black no-underline db f8 pt3"    , href: "https://urbit.org/docs", __self: this, __source: {fileName: _jsxFileName, lineNumber: 24}}, "-> Read the docs"   )
+              , React.createElement('p', { className: "lh-copy measure pt3"  , __self: this, __source: {fileName: _jsxFileName, lineNumber: 22}}, "Welcome to your Urbit Draw!"    )
+              , React.createElement('p', { className: "lh-copy measure pt3"  , __self: this, __source: {fileName: _jsxFileName, lineNumber: 23}}, "To try this out, edit "     , React.createElement('code', {__self: this, __source: {fileName: _jsxFileName, lineNumber: 23}}, "src/index.js"), " or "  , React.createElement('code', {__self: this, __source: {fileName: _jsxFileName, lineNumber: 23}}, "draw.hoon"), " and "  , React.createElement('code', {__self: this, __source: {fileName: _jsxFileName, lineNumber: 23}}, "|commit %home" ), " on your Urbit ship to see your changes."        )
+              , React.createElement('a', { className: "no-underline db f8 pt3"   , href: "https://urbit.org/docs", __self: this, __source: {fileName: _jsxFileName, lineNumber: 24}}, "-> Read the docs"   )
             )
           )}, __self: this, __source: {fileName: _jsxFileName, lineNumber: 18}}
         )
