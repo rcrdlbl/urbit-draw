@@ -1,4 +1,4 @@
-const _jsxFileName = "/Users/przemyslaw/urbit-draw/src/js/components/Sidebar.js";// import {React} from "react";
+const _jsxFileName = "/Users/przemyslaw/urbit-draw/src/js/components/containers/Sidebar.js";import React from "react";
 
 const Sidebar = () => {
   return (
